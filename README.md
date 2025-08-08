@@ -5,7 +5,7 @@ The source for these transforms is Appendix 3 of Kivelson and Russell's [_Introd
 
 Each coordinate system is defined with two quantities: the direction of one of the axes and the orientation of the other two axes in the plane perpendicular to this direction. 
 
-| Frame    | Full Name | Axis Definition | Plane Definition | Used In: | K&R Appendix |
+| Frame    | Abbreviation | Axis Definition | Plane Definition | Used In: | K&R Appendix |
 | -------- | ------- |------- |------- |------- |------- |
 | Geocentric Equatorial Inertial System  | GEI    | X-axis from Earth toward the first point of Ares (position of Sun at vernal equinox)| Z-axis parallel to Earth's rotation, y = x × z| Astronomy and satellite orbit calculations | A.3.3.1 |
 | Geographic Coordinates | GEO  | X-axis fixed with equatorial plane at 0 degrees longitude | Z axis parallel to rotation axis of the Earth | Ground coordinates | A.3.3.2 |
@@ -13,3 +13,4 @@ Each coordinate system is defined with two quantities: the direction of one of t
 | Geocentric Solar Ecliptic | GSE  | X-axis pointing from Earth to Sun | Y-axis in ecliptic plane pointing toward dusk (opposing planetary motion); z-axis parallel to ecliptic pole | Interplanetary magnetic field, solar wind velocity data | A.3.3.4 |
 | Geocentric Solar Equatorial | GSEQ  | X-axis pointing from Earth to Sun | Y-axis parallel to the sun's equatorial plane (which is inclined to the ecliptic) | Interplanetary magnetic field data | A.3.3.5 |
 | Geocentric Solar Magnetospheric | GSM  | X-axis pointing from Earth to Sun | Y-axis perpendicular to Earth's magnetic dipole, so that the x-z plane contains the dipole axis; Z-axis in same sense as Earth's magnetic pole | Magnetospheric stuff | A.3.3.6 |
+| Solar Magnetic Coordinates | SM  | Z axis parallel to north magnetic pole | Y-axis perpendicular to Earth/Sun line toward dusk | Data controlled more strongly by Earth's field than by solar wind | A.3.3.7 |
