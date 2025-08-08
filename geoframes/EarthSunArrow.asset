@@ -1,0 +1,31 @@
+local earth = asset.require("scene/solarsystem/planets/earth/earth")
+local sun = asset.require("scene/solarsystem/sun/sun")
+
+local Node = {
+  Identifier = "RenderableNodeArrow_Example",
+  -- Parent to the start node, so that when we focus on the arrow this is where we end up
+  Parent = earth.Earth.Identifier,
+  Renderable = {
+    Type = "RenderableNodeArrow",
+    StartNode = earth.Earth.Identifier,
+    EndNode = sun.Sun.Identifier,
+    -- How far away from the start node should the arrow start (meters)
+    Offset = .2 * 6371000.0,
+    -- How long should the arrow be (meters)
+    Length = 10 * 6371000.0,
+    -- How wide should the arrow be (meters)
+    Width = 900000.0
+  },
+  GUI = {
+    Name = "Earth to Sun",
+    Path = "/Coordinate Frames"
+  }
+}
+
+asset.onInitialize(function()
+  openspace.addSceneGraphNode(Node)
+end)
+
+asset.onDeinitialize(function()
+  openspace.removeSceneGraphNode(Node)
+end)
